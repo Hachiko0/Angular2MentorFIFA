@@ -1,5 +1,6 @@
 ﻿import { Component } from '@angular/core';
-import { ActiveTournamentsComponent } from './app.component.activeTournaments';
+import { ActiveTournamentsComponent } from './tournament/app.component.activeTournaments';
+import { TournamentService } from './tournament/app.service.tournament'
 import { DashboardComponent } from './app.component.dashboard';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
@@ -7,7 +8,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
     selector: 'my-app',
     templateUrl: 'app/component.html',
     directives: [ ROUTER_DIRECTIVES ],
-    providers: [ ROUTER_PROVIDERS ]
+    providers: [ROUTER_PROVIDERS, TournamentService ]
 })
 
 @RouteConfig([
