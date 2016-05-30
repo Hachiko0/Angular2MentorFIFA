@@ -10,9 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var app_component_activeTournaments_1 = require('./tournament/app.component.activeTournaments');
-var app_service_tournament_1 = require('./tournament/app.service.tournament');
 var app_component_dashboard_1 = require('./app.component.dashboard');
 var router_deprecated_1 = require('@angular/router-deprecated');
+require('rxjs/add/operator/map');
+require('rxjs/add/operator/toPromise');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -21,7 +22,7 @@ var AppComponent = (function () {
             selector: 'my-app',
             templateUrl: 'app/component.html',
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
-            providers: [router_deprecated_1.ROUTER_PROVIDERS, app_service_tournament_1.TournamentService]
+            providers: [router_deprecated_1.ROUTER_PROVIDERS]
         }),
         router_deprecated_1.RouteConfig([
             {

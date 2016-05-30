@@ -9,15 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var app_service_tournament_1 = require('./app.service.tournament');
 var ActiveTournamentsComponent = (function () {
-    function ActiveTournamentsComponent() {
+    function ActiveTournamentsComponent(tournamentService) {
+        this.tournamentService = tournamentService;
+        this.ponyName = 'Krasko';
     }
+    ActiveTournamentsComponent.prototype.onClickMe = function () {
+        alert(123);
+        var tournaments = this.tournamentService.getActiveTournaments();
+        console.log(tournaments);
+    };
     ActiveTournamentsComponent = __decorate([
         core_1.Component({
             selector: 'active-tournament',
-            template: "<h1>This is another page he-he</h1>"
+            template: "<button (click)=\"onClickMe()\">Click me!</button>\n<p>Hello {{ponyName}}</p>",
+            providers: [app_service_tournament_1.TournamentService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [app_service_tournament_1.TournamentService])
     ], ActiveTournamentsComponent);
     return ActiveTournamentsComponent;
 }());

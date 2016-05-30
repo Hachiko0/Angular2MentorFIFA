@@ -15,6 +15,12 @@ var TournamentService = (function () {
     function TournamentService(http) {
         this.http = http;
     }
+    TournamentService.prototype.getActiveTournaments = function () {
+        //alert(666);
+        //return this.http.get('http://localhost:6456/api/teams').forEach(v => console.log(v.json));
+        alert(444);
+        return this.http.get('api/teams').forEach(function (v) { return console.log(v.json); });
+    };
     TournamentService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

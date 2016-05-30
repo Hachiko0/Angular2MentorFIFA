@@ -9,7 +9,10 @@ import { Tournament } from './tournament';
 export class TournamentService {
     constructor(private http: Http) { }
 
-    //getActiveTournaments(): Observable<Tournament[]> {
-    //    return this.http.get('api/Tournaments').
-    //}
+    getActiveTournaments(): any {
+        //alert(666);
+        //return this.http.get('http://localhost:6456/api/teams').forEach(v => console.log(v.json));
+        alert(444);
+        return this.http.get('api/teams').forEach(v => console.log(v.json));
+    }
 }
