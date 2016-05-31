@@ -11,15 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var Rx_1 = require('rxjs/Rx');
-// Statics
-//import 'rxjs/add/observable/throw';
-//// Operators
-//import 'rxjs/add/operator/catch';
-//import 'rxjs/add/operator/debounceTime';
-//import 'rxjs/add/operator/distinctUntilChanged';
-//import 'rxjs/add/operator/map';
-//import 'rxjs/add/operator/switchMap';
-require('rxjs/add/operator/toPromise');
+require('./rxjs-operators767687');
 var TournamentService = (function () {
     function TournamentService(http) {
         this.http = http;

@@ -16,14 +16,15 @@ var ActiveTournamentsComponent = (function () {
         this.ponyName = 'Krasko';
     }
     ActiveTournamentsComponent.prototype.onClickMe = function () {
-        alert(123);
-        var tournaments = this.tournamentService.getActiveTournaments();
-        console.log(tournaments);
+        var tournaments = null;
+        var result = this.tournamentService.getActiveTournaments();
+        //let tournaments: Array<Tournament> = this.tournamentService.getActiveTournaments();
+        //tournaments.forEach(t => console.log(t.name));
     };
     ActiveTournamentsComponent = __decorate([
         core_1.Component({
             selector: 'active-tournament',
-            template: "<button (click)=\"onClickMe()\">Click me!</button>\n<p>Hello {{ponyName}}</p>",
+            template: "<button (click)=\"onClickMe()\">Click me!</button>\n            <p>Hello {{ponyName}}</p>",
             providers: [app_service_tournament_1.TournamentService]
         }), 
         __metadata('design:paramtypes', [app_service_tournament_1.TournamentService])

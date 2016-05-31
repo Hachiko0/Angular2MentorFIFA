@@ -24,7 +24,7 @@ namespace Angular2.Controllers
         [HttpGet]
         public IEnumerable<Team> GetTeams()
         {
-            return _context.Teams;
+            return _context.Teams.ToList();
         }
 
         // GET: api/Teams/5
